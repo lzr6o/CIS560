@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtUsername = new System.Windows.Forms.TextBox();
@@ -35,6 +36,11 @@
             this.btnSignIn = new System.Windows.Forms.Button();
             this.btnSignUp = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.zhengruiDataSet = new Crusader.zhengruiDataSet();
+            this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.userTableAdapter = new Crusader.zhengruiDataSetTableAdapters.UserTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.zhengruiDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -98,6 +104,20 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "No account? Click here";
             // 
+            // zhengruiDataSet
+            // 
+            this.zhengruiDataSet.DataSetName = "zhengruiDataSet";
+            this.zhengruiDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // userBindingSource
+            // 
+            this.userBindingSource.DataMember = "User";
+            this.userBindingSource.DataSource = this.zhengruiDataSet;
+            // 
+            // userTableAdapter
+            // 
+            this.userTableAdapter.ClearBeforeFill = true;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -113,6 +133,8 @@
             this.Name = "Login";
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Login_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.zhengruiDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -127,5 +149,8 @@
         private System.Windows.Forms.Button btnSignIn;
         private System.Windows.Forms.Button btnSignUp;
         private System.Windows.Forms.Label label3;
+        private zhengruiDataSet zhengruiDataSet;
+        private System.Windows.Forms.BindingSource userBindingSource;
+        private zhengruiDataSetTableAdapters.UserTableAdapter userTableAdapter;
     }
 }

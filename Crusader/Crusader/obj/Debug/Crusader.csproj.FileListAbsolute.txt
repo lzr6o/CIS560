@@ -19,3 +19,8 @@ C:\Users\zhengrui\Source\Repos\CIS560\Crusader\Crusader\obj\Debug\Crusader.cspro
 C:\Users\zhengrui\Source\Repos\CIS560\Crusader\Crusader\obj\Debug\Crusader.exe
 C:\Users\zhengrui\Source\Repos\CIS560\Crusader\Crusader\obj\Debug\Crusader.pdb
 C:\Users\zhengrui\Source\Repos\CIS560\Crusader\Crusader\obj\Debug\Crusader.Login.resources
+C:\Users\zhengrui\Source\Repos\CIS560\Crusader\Crusader\bin\Debug\EntityFramework.dll
+C:\Users\zhengrui\Source\Repos\CIS560\Crusader\Crusader\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\zhengrui\Source\Repos\CIS560\Crusader\Crusader\bin\Debug\EntityFramework.xml
+C:\Users\zhengrui\Source\Repos\CIS560\Crusader\Crusader\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\zhengrui\Source\Repos\CIS560\Crusader\Crusader\obj\Debug\Crusader.csproj.CopyComplete
