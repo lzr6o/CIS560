@@ -42,6 +42,7 @@ namespace Crusader
                             else
                             {
                                 MessageBox.Show("Welcome Admin");
+                                new QueryAssistant().ShowDialog();
                             }
                         }
                         else
@@ -59,7 +60,7 @@ namespace Crusader
 
         private void btnSignUp_Click(object sender, EventArgs e)
         {
-
+            new SignUp().ShowDialog();
         }
 
         private void Login_Load(object sender, EventArgs e)
