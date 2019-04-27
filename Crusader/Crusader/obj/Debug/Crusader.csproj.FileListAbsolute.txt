@@ -25,3 +25,4 @@ C:\Users\zhengrui\Source\Repos\CIS560\Crusader\Crusader\bin\Debug\EntityFramewor
 C:\Users\zhengrui\Source\Repos\CIS560\Crusader\Crusader\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\zhengrui\Source\Repos\CIS560\Crusader\Crusader\obj\Debug\Crusader.csproj.CopyComplete
 C:\Users\zhengrui\Source\Repos\CIS560\Crusader\Crusader\obj\Debug\Crusader.SignUp.resources
+C:\Users\zhengrui\Source\Repos\CIS560\Crusader\Crusader\obj\Debug\Crusader.SearchCategory.resources
