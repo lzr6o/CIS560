@@ -1,0 +1,10 @@
+C:\Users\zhengrui\source\repos\Crusader\Crusader\bin\Debug\Crusader.exe.config
+C:\Users\zhengrui\source\repos\Crusader\Crusader\bin\Debug\Crusader.exe
+C:\Users\zhengrui\source\repos\Crusader\Crusader\bin\Debug\Crusader.pdb
+C:\Users\zhengrui\source\repos\Crusader\Crusader\obj\Debug\Crusader.csprojAssemblyReference.cache
+C:\Users\zhengrui\source\repos\Crusader\Crusader\obj\Debug\Crusader.Form1.resources
+C:\Users\zhengrui\source\repos\Crusader\Crusader\obj\Debug\Crusader.Properties.Resources.resources
+C:\Users\zhengrui\source\repos\Crusader\Crusader\obj\Debug\Crusader.csproj.GenerateResource.cache
+C:\Users\zhengrui\source\repos\Crusader\Crusader\obj\Debug\Crusader.csproj.CoreCompileInputs.cache
+C:\Users\zhengrui\source\repos\Crusader\Crusader\obj\Debug\Crusader.exe
+C:\Users\zhengrui\source\repos\Crusader\Crusader\obj\Debug\Crusader.pdb
