@@ -11,13 +11,13 @@ using System.Data.SqlClient;
 
 namespace Crusader
 {
-    public partial class Form1 : Form
+    public partial class QueryAssistant : Form
     {
         String conn_string = "Data Source=mssql.cs.ksu.edu;Initial Catalog=zhengrui;Integrated Security=True";
         String error_msg = "";
         String q = "";
         SqlConnection conn = null;
-        public Form1()
+        public QueryAssistant()
         {
             InitializeComponent();
         }

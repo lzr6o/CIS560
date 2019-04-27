@@ -8,3 +8,14 @@ C:\Users\zhengrui\source\repos\Crusader\Crusader\obj\Debug\Crusader.csproj.Gener
 C:\Users\zhengrui\source\repos\Crusader\Crusader\obj\Debug\Crusader.csproj.CoreCompileInputs.cache
 C:\Users\zhengrui\source\repos\Crusader\Crusader\obj\Debug\Crusader.exe
 C:\Users\zhengrui\source\repos\Crusader\Crusader\obj\Debug\Crusader.pdb
+C:\Users\zhengrui\Source\Repos\CIS560\Crusader\Crusader\bin\Debug\Crusader.exe.config
+C:\Users\zhengrui\Source\Repos\CIS560\Crusader\Crusader\bin\Debug\Crusader.exe
+C:\Users\zhengrui\Source\Repos\CIS560\Crusader\Crusader\bin\Debug\Crusader.pdb
+C:\Users\zhengrui\Source\Repos\CIS560\Crusader\Crusader\obj\Debug\Crusader.csprojAssemblyReference.cache
+C:\Users\zhengrui\Source\Repos\CIS560\Crusader\Crusader\obj\Debug\Crusader.QueryAssistant.resources
+C:\Users\zhengrui\Source\Repos\CIS560\Crusader\Crusader\obj\Debug\Crusader.Properties.Resources.resources
+C:\Users\zhengrui\Source\Repos\CIS560\Crusader\Crusader\obj\Debug\Crusader.csproj.GenerateResource.cache
+C:\Users\zhengrui\Source\Repos\CIS560\Crusader\Crusader\obj\Debug\Crusader.csproj.CoreCompileInputs.cache
+C:\Users\zhengrui\Source\Repos\CIS560\Crusader\Crusader\obj\Debug\Crusader.exe
+C:\Users\zhengrui\Source\Repos\CIS560\Crusader\Crusader\obj\Debug\Crusader.pdb
+C:\Users\zhengrui\Source\Repos\CIS560\Crusader\Crusader\obj\Debug\Crusader.Login.resources

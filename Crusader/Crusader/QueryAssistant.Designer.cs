@@ -1,6 +1,6 @@
 ﻿namespace Crusader
 {
-    partial class Form1
+    partial class QueryAssistant
     {
         /// <summary>
         /// Required designer variable.
