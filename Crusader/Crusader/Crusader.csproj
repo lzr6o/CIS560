@@ -73,6 +73,12 @@
     <Compile Include="HeroSearch.Designer.cs">
       <DependentUpon>HeroSearch.cs</DependentUpon>
     </Compile>
+    <Compile Include="Join.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Join.Designer.cs">
+      <DependentUpon>Join.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,6 +171,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HeroSearch.resx">
       <DependentUpon>HeroSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Join.resx">
+      <DependentUpon>Join.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

@@ -15,7 +15,6 @@ namespace Crusader
     {
         String conn_string = "Data Source=mssql.cs.ksu.edu;Initial Catalog=zhengrui;Integrated Security=True";
         String q = "";
-        String error_msg = "";
         SqlConnection conn = null;
 
         public NPCSearch()
@@ -25,20 +24,20 @@ namespace Crusader
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            conn.Open();
-            string NPCName = txtNPCName.Text;
-            string skill = txtSkill.Text;
-            string type = txtType.Text;
-            string faction = txtFaction.Text;
-            string order = "SELECT * FROM Crusader.NPC n WHERE ";
-            q = "";
-            if (NPCName != "") { q = q + "n.NPCName LIKE '%" + NPCName + "%' AND "; }
-            if (skill != "") { q = q + "n.Skill LIKE '%" + skill + "%' AND "; }
-            if (type != "") { q = q + "n.[Type] LIKE '%" + type + "%' AND "; }
-            if (faction != "") { q = q + "n.Faction LIKE '%" + faction + "%' AND "; }
-            order = order + q.Remove(q.Length - 4, 3);
             try
             {
+                conn.Open();
+                string NPCName = txtNPCName.Text;
+                string skill = txtSkill.Text;
+                string type = txtType.Text;
+                string faction = txtFaction.Text;
+                string order = "SELECT * FROM Crusader.NPC n WHERE ";
+                q = "";
+                if (NPCName != "") { q = q + "n.NPCName LIKE '%" + NPCName + "%' AND "; }
+                if (skill != "") { q = q + "n.Skill LIKE '%" + skill + "%' AND "; }
+                if (type != "") { q = q + "n.[Type] LIKE '%" + type + "%' AND "; }
+                if (faction != "") { q = q + "n.Faction LIKE '%" + faction + "%' AND "; }
+                order = order + q.Remove(q.Length - 4, 3);
                 SqlCommand cmd = new SqlCommand(order, conn);
                 SqlDataAdapter a = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
@@ -50,8 +49,7 @@ namespace Crusader
             }
             catch (Exception ex)
             {
-                error_msg = ex.Message;
-                MessageBox.Show(error_msg);
+                MessageBox.Show("Empty Input");
             }
             conn.Close();
         }

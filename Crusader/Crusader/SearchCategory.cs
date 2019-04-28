@@ -36,5 +36,10 @@ namespace Crusader
         {
             new ResourceSearch().ShowDialog();
         }
+
+        private void btnJoin_Click(object sender, EventArgs e)
+        {
+            new Join().ShowDialog();
+        }
     }
 }

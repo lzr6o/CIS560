@@ -30,28 +30,28 @@
         {
             this.components = new System.ComponentModel.Container();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtResourceName = new System.Windows.Forms.TextBox();
-            this.txtType = new System.Windows.Forms.TextBox();
-            this.txtUsage = new System.Windows.Forms.TextBox();
             this.txtAcquisition = new System.Windows.Forms.TextBox();
+            this.txtUsage = new System.Windows.Forms.TextBox();
+            this.txtType = new System.Windows.Forms.TextBox();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.txtResourceName = new System.Windows.Forms.TextBox();
             this.results = new System.Windows.Forms.DataGridView();
-            this.zhengruiDataSet4 = new Crusader.zhengruiDataSet4();
-            this.resourceBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.resourceTableAdapter = new Crusader.zhengruiDataSet4TableAdapters.ResourceTableAdapter();
             this.resourceIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.resourceNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.typeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.acquisitionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.resourceBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.zhengruiDataSet4 = new Crusader.zhengruiDataSet4();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.resourceTableAdapter = new Crusader.zhengruiDataSet4TableAdapters.ResourceTableAdapter();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.results)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.zhengruiDataSet4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.resourceBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zhengruiDataSet4)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -77,6 +77,30 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(628, 450);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
+            // txtAcquisition
+            // 
+            this.txtAcquisition.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtAcquisition.Location = new System.Drawing.Point(3, 84);
+            this.txtAcquisition.Name = "txtAcquisition";
+            this.txtAcquisition.Size = new System.Drawing.Size(622, 20);
+            this.txtAcquisition.TabIndex = 4;
+            // 
+            // txtUsage
+            // 
+            this.txtUsage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtUsage.Location = new System.Drawing.Point(3, 57);
+            this.txtUsage.Name = "txtUsage";
+            this.txtUsage.Size = new System.Drawing.Size(622, 20);
+            this.txtUsage.TabIndex = 3;
+            // 
+            // txtType
+            // 
+            this.txtType.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtType.Location = new System.Drawing.Point(3, 30);
+            this.txtType.Name = "txtType";
+            this.txtType.Size = new System.Drawing.Size(622, 20);
+            this.txtType.TabIndex = 2;
+            // 
             // btnSearch
             // 
             this.btnSearch.Location = new System.Drawing.Point(3, 111);
@@ -86,6 +110,72 @@
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // txtResourceName
+            // 
+            this.txtResourceName.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtResourceName.Location = new System.Drawing.Point(3, 3);
+            this.txtResourceName.Name = "txtResourceName";
+            this.txtResourceName.Size = new System.Drawing.Size(622, 20);
+            this.txtResourceName.TabIndex = 1;
+            // 
+            // results
+            // 
+            this.results.AutoGenerateColumns = false;
+            this.results.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.results.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.resourceIdDataGridViewTextBoxColumn,
+            this.resourceNameDataGridViewTextBoxColumn,
+            this.typeDataGridViewTextBoxColumn,
+            this.usageDataGridViewTextBoxColumn,
+            this.acquisitionDataGridViewTextBoxColumn});
+            this.results.DataSource = this.resourceBindingSource;
+            this.results.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.results.Location = new System.Drawing.Point(3, 138);
+            this.results.Name = "results";
+            this.results.Size = new System.Drawing.Size(622, 309);
+            this.results.TabIndex = 5;
+            // 
+            // resourceIdDataGridViewTextBoxColumn
+            // 
+            this.resourceIdDataGridViewTextBoxColumn.DataPropertyName = "ResourceId";
+            this.resourceIdDataGridViewTextBoxColumn.HeaderText = "ResourceId";
+            this.resourceIdDataGridViewTextBoxColumn.Name = "resourceIdDataGridViewTextBoxColumn";
+            this.resourceIdDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // resourceNameDataGridViewTextBoxColumn
+            // 
+            this.resourceNameDataGridViewTextBoxColumn.DataPropertyName = "ResourceName";
+            this.resourceNameDataGridViewTextBoxColumn.HeaderText = "ResourceName";
+            this.resourceNameDataGridViewTextBoxColumn.Name = "resourceNameDataGridViewTextBoxColumn";
+            // 
+            // typeDataGridViewTextBoxColumn
+            // 
+            this.typeDataGridViewTextBoxColumn.DataPropertyName = "Type";
+            this.typeDataGridViewTextBoxColumn.HeaderText = "Type";
+            this.typeDataGridViewTextBoxColumn.Name = "typeDataGridViewTextBoxColumn";
+            // 
+            // usageDataGridViewTextBoxColumn
+            // 
+            this.usageDataGridViewTextBoxColumn.DataPropertyName = "Usage";
+            this.usageDataGridViewTextBoxColumn.HeaderText = "Usage";
+            this.usageDataGridViewTextBoxColumn.Name = "usageDataGridViewTextBoxColumn";
+            // 
+            // acquisitionDataGridViewTextBoxColumn
+            // 
+            this.acquisitionDataGridViewTextBoxColumn.DataPropertyName = "Acquisition";
+            this.acquisitionDataGridViewTextBoxColumn.HeaderText = "Acquisition";
+            this.acquisitionDataGridViewTextBoxColumn.Name = "acquisitionDataGridViewTextBoxColumn";
+            // 
+            // resourceBindingSource
+            // 
+            this.resourceBindingSource.DataMember = "Resource";
+            this.resourceBindingSource.DataSource = this.zhengruiDataSet4;
+            // 
+            // zhengruiDataSet4
+            // 
+            this.zhengruiDataSet4.DataSetName = "zhengruiDataSet4";
+            this.zhengruiDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label1
             // 
@@ -123,99 +213,9 @@
             this.label4.TabIndex = 4;
             this.label4.Text = "Acquisition:";
             // 
-            // txtResourceName
-            // 
-            this.txtResourceName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtResourceName.Location = new System.Drawing.Point(3, 3);
-            this.txtResourceName.Name = "txtResourceName";
-            this.txtResourceName.Size = new System.Drawing.Size(622, 20);
-            this.txtResourceName.TabIndex = 1;
-            // 
-            // txtType
-            // 
-            this.txtType.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtType.Location = new System.Drawing.Point(3, 30);
-            this.txtType.Name = "txtType";
-            this.txtType.Size = new System.Drawing.Size(622, 20);
-            this.txtType.TabIndex = 2;
-            // 
-            // txtUsage
-            // 
-            this.txtUsage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtUsage.Location = new System.Drawing.Point(3, 57);
-            this.txtUsage.Name = "txtUsage";
-            this.txtUsage.Size = new System.Drawing.Size(622, 20);
-            this.txtUsage.TabIndex = 3;
-            // 
-            // txtAcquisition
-            // 
-            this.txtAcquisition.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtAcquisition.Location = new System.Drawing.Point(3, 84);
-            this.txtAcquisition.Name = "txtAcquisition";
-            this.txtAcquisition.Size = new System.Drawing.Size(622, 20);
-            this.txtAcquisition.TabIndex = 4;
-            // 
-            // results
-            // 
-            this.results.AutoGenerateColumns = false;
-            this.results.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.results.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.resourceIdDataGridViewTextBoxColumn,
-            this.resourceNameDataGridViewTextBoxColumn,
-            this.typeDataGridViewTextBoxColumn,
-            this.usageDataGridViewTextBoxColumn,
-            this.acquisitionDataGridViewTextBoxColumn});
-            this.results.DataSource = this.resourceBindingSource;
-            this.results.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.results.Location = new System.Drawing.Point(3, 138);
-            this.results.Name = "results";
-            this.results.Size = new System.Drawing.Size(622, 309);
-            this.results.TabIndex = 5;
-            // 
-            // zhengruiDataSet4
-            // 
-            this.zhengruiDataSet4.DataSetName = "zhengruiDataSet4";
-            this.zhengruiDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // resourceBindingSource
-            // 
-            this.resourceBindingSource.DataMember = "Resource";
-            this.resourceBindingSource.DataSource = this.zhengruiDataSet4;
-            // 
             // resourceTableAdapter
             // 
             this.resourceTableAdapter.ClearBeforeFill = true;
-            // 
-            // resourceIdDataGridViewTextBoxColumn
-            // 
-            this.resourceIdDataGridViewTextBoxColumn.DataPropertyName = "ResourceId";
-            this.resourceIdDataGridViewTextBoxColumn.HeaderText = "ResourceId";
-            this.resourceIdDataGridViewTextBoxColumn.Name = "resourceIdDataGridViewTextBoxColumn";
-            this.resourceIdDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // resourceNameDataGridViewTextBoxColumn
-            // 
-            this.resourceNameDataGridViewTextBoxColumn.DataPropertyName = "ResourceName";
-            this.resourceNameDataGridViewTextBoxColumn.HeaderText = "ResourceName";
-            this.resourceNameDataGridViewTextBoxColumn.Name = "resourceNameDataGridViewTextBoxColumn";
-            // 
-            // typeDataGridViewTextBoxColumn
-            // 
-            this.typeDataGridViewTextBoxColumn.DataPropertyName = "Type";
-            this.typeDataGridViewTextBoxColumn.HeaderText = "Type";
-            this.typeDataGridViewTextBoxColumn.Name = "typeDataGridViewTextBoxColumn";
-            // 
-            // usageDataGridViewTextBoxColumn
-            // 
-            this.usageDataGridViewTextBoxColumn.DataPropertyName = "Usage";
-            this.usageDataGridViewTextBoxColumn.HeaderText = "Usage";
-            this.usageDataGridViewTextBoxColumn.Name = "usageDataGridViewTextBoxColumn";
-            // 
-            // acquisitionDataGridViewTextBoxColumn
-            // 
-            this.acquisitionDataGridViewTextBoxColumn.DataPropertyName = "Acquisition";
-            this.acquisitionDataGridViewTextBoxColumn.HeaderText = "Acquisition";
-            this.acquisitionDataGridViewTextBoxColumn.Name = "acquisitionDataGridViewTextBoxColumn";
             // 
             // ResourceSearch
             // 
@@ -233,8 +233,8 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.results)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.zhengruiDataSet4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.resourceBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zhengruiDataSet4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

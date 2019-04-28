@@ -15,7 +15,6 @@ namespace Crusader
     {
         String conn_string = "Data Source=mssql.cs.ksu.edu;Initial Catalog=zhengrui;Integrated Security=True";
         String q = "";
-        String error_msg = "";
         SqlConnection conn = null;
 
         public ChapterSearch()
@@ -25,23 +24,22 @@ namespace Crusader
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            conn.Open();
-            string Episode = txtEpisode.Text;
-            string ChapterName = txtChapterName.Text;
-            string Environment = txtEnvironment.Text;
-            string Boss = txtBoss.Text;
-            string Cost = txtCost.Text;
-
-            string order = "SELECT * FROM Crusader.Chapter c WHERE ";
-            q = "";
-            if (Episode != "") { q = q + "c.Episode LIKE '%" + Episode + "%' AND "; }
-            if (ChapterName != "") { q = q + "c.ChapterName LIKE '%" + ChapterName + "%' AND "; }
-            if (Environment != "") { q = q + "c.Environment LIKE '%" + Environment + "%' AND "; }
-            if (Boss != "") { q = q + "c.Boss LIKE '%" + Boss + "%' AND "; }
-            if (Cost != "") { q = q + "c.Cost LIKE '%" + Cost + "%' AND "; }
-            order = order + q.Remove(q.Length - 4, 3);
             try
-            {
+            { 
+                conn.Open();
+                string Episode = txtEpisode.Text;
+                string ChapterName = txtChapterName.Text;
+                string Environment = txtEnvironment.Text;
+                string Boss = txtBoss.Text;
+                string Cost = txtCost.Text;
+                string order = "SELECT * FROM Crusader.Chapter c WHERE ";
+                q = "";
+                if (Episode != "") { q = q + "c.Episode LIKE '%" + Episode + "%' AND "; }
+                if (ChapterName != "") { q = q + "c.ChapterName LIKE '%" + ChapterName + "%' AND "; }
+                if (Environment != "") { q = q + "c.Environment LIKE '%" + Environment + "%' AND "; }
+                if (Boss != "") { q = q + "c.Boss LIKE '%" + Boss + "%' AND "; }
+                if (Cost != "") { q = q + "c.Cost LIKE '%" + Cost + "%' AND "; }
+                order = order + q.Remove(q.Length - 4, 3);
                 SqlCommand cmd = new SqlCommand(order, conn);
                 SqlDataAdapter a = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
@@ -49,12 +47,10 @@ namespace Crusader
                 a.Fill(dt);
                 results.DataSource = dt;
                 results.AutoResizeColumns();
-
             }
             catch (Exception ex)
             {
-                error_msg = ex.Message;
-                MessageBox.Show(error_msg);
+                MessageBox.Show("Empty Input");
             }
             conn.Close();
         }

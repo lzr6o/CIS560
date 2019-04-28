@@ -15,7 +15,6 @@ namespace Crusader
     {
         String conn_string = "Data Source=mssql.cs.ksu.edu;Initial Catalog=zhengrui;Integrated Security=True";
         String q = "";
-        String error_msg = "";
         SqlConnection conn = null;
 
         public ResourceSearch()
@@ -25,22 +24,20 @@ namespace Crusader
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            conn.Open();
-            string ResourceName = txtResourceName.Text;
-            string Type = txtType.Text;
-            string Usage = txtUsage.Text;
-            string Acquisition = txtAcquisition.Text;
-
-            string order = "SELECT * FROM Crusader.Resource r WHERE ";
-            q = "";
-            if (ResourceName != "") { q = q + "r.ResourceName LIKE '%" + ResourceName + "%' AND "; }
-            if (Type != "") { q = q + "r.Type LIKE '%" + Type + "%' AND "; }
-            if (Usage != "") { q = q + "r.Usage LIKE '%" + Usage + "%' AND "; }
-            if (Acquisition != "") { q = q + "r.Acquisition LIKE '%" + Acquisition + "%' AND "; }
-
-            order = order + q.Remove(q.Length - 4, 3);
             try
             {
+                conn.Open();
+                string ResourceName = txtResourceName.Text;
+                string Type = txtType.Text;
+                string Usage = txtUsage.Text;
+                string Acquisition = txtAcquisition.Text;
+                string order = "SELECT * FROM Crusader.Resource r WHERE ";
+                q = "";
+                if (ResourceName != "") { q = q + "r.ResourceName LIKE '%" + ResourceName + "%' AND "; }
+                if (Type != "") { q = q + "r.Type LIKE '%" + Type + "%' AND "; }
+                if (Usage != "") { q = q + "r.Usage LIKE '%" + Usage + "%' AND "; }
+                if (Acquisition != "") { q = q + "r.Acquisition LIKE '%" + Acquisition + "%' AND "; }
+                order = order + q.Remove(q.Length - 4, 3);
                 SqlCommand cmd = new SqlCommand(order, conn);
                 SqlDataAdapter a = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
@@ -52,8 +49,7 @@ namespace Crusader
             }
             catch (Exception ex)
             {
-                error_msg = ex.Message;
-                MessageBox.Show(error_msg);
+                MessageBox.Show("Empty Input");
             }
             conn.Close();
         }

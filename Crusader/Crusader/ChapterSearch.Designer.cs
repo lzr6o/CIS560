@@ -30,31 +30,31 @@
         {
             this.components = new System.ComponentModel.Container();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.txtCost = new System.Windows.Forms.TextBox();
+            this.txtBoss = new System.Windows.Forms.TextBox();
+            this.txtEnvironment = new System.Windows.Forms.TextBox();
+            this.txtChapterName = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.results = new System.Windows.Forms.DataGridView();
-            this.txtEpisode = new System.Windows.Forms.TextBox();
-            this.txtChapterName = new System.Windows.Forms.TextBox();
-            this.txtEnvironment = new System.Windows.Forms.TextBox();
-            this.txtBoss = new System.Windows.Forms.TextBox();
-            this.txtCost = new System.Windows.Forms.TextBox();
-            this.zhengruiDataSet3 = new Crusader.zhengruiDataSet3();
-            this.chapterBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.chapterTableAdapter = new Crusader.zhengruiDataSet3TableAdapters.ChapterTableAdapter();
             this.chapterIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.episodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.chapterNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.environmentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bossDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.costDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.chapterBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.zhengruiDataSet3 = new Crusader.zhengruiDataSet3();
+            this.txtEpisode = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.chapterTableAdapter = new Crusader.zhengruiDataSet3TableAdapters.ChapterTableAdapter();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.results)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.zhengruiDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chapterBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zhengruiDataSet3)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -81,6 +81,121 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 64F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(576, 450);
             this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // txtCost
+            // 
+            this.txtCost.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtCost.Location = new System.Drawing.Point(3, 111);
+            this.txtCost.Name = "txtCost";
+            this.txtCost.Size = new System.Drawing.Size(570, 20);
+            this.txtCost.TabIndex = 6;
+            // 
+            // txtBoss
+            // 
+            this.txtBoss.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtBoss.Location = new System.Drawing.Point(3, 84);
+            this.txtBoss.Name = "txtBoss";
+            this.txtBoss.Size = new System.Drawing.Size(570, 20);
+            this.txtBoss.TabIndex = 5;
+            // 
+            // txtEnvironment
+            // 
+            this.txtEnvironment.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtEnvironment.Location = new System.Drawing.Point(3, 57);
+            this.txtEnvironment.Name = "txtEnvironment";
+            this.txtEnvironment.Size = new System.Drawing.Size(570, 20);
+            this.txtEnvironment.TabIndex = 4;
+            // 
+            // txtChapterName
+            // 
+            this.txtChapterName.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtChapterName.Location = new System.Drawing.Point(3, 30);
+            this.txtChapterName.Name = "txtChapterName";
+            this.txtChapterName.Size = new System.Drawing.Size(570, 20);
+            this.txtChapterName.TabIndex = 3;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Location = new System.Drawing.Point(3, 138);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(75, 21);
+            this.btnSearch.TabIndex = 0;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // results
+            // 
+            this.results.AutoGenerateColumns = false;
+            this.results.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.results.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.chapterIdDataGridViewTextBoxColumn,
+            this.episodeDataGridViewTextBoxColumn,
+            this.chapterNameDataGridViewTextBoxColumn,
+            this.environmentDataGridViewTextBoxColumn,
+            this.bossDataGridViewTextBoxColumn,
+            this.costDataGridViewTextBoxColumn});
+            this.results.DataSource = this.chapterBindingSource;
+            this.results.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.results.Location = new System.Drawing.Point(3, 165);
+            this.results.Name = "results";
+            this.results.Size = new System.Drawing.Size(570, 282);
+            this.results.TabIndex = 1;
+            // 
+            // chapterIdDataGridViewTextBoxColumn
+            // 
+            this.chapterIdDataGridViewTextBoxColumn.DataPropertyName = "ChapterId";
+            this.chapterIdDataGridViewTextBoxColumn.HeaderText = "ChapterId";
+            this.chapterIdDataGridViewTextBoxColumn.Name = "chapterIdDataGridViewTextBoxColumn";
+            this.chapterIdDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // episodeDataGridViewTextBoxColumn
+            // 
+            this.episodeDataGridViewTextBoxColumn.DataPropertyName = "Episode";
+            this.episodeDataGridViewTextBoxColumn.HeaderText = "Episode";
+            this.episodeDataGridViewTextBoxColumn.Name = "episodeDataGridViewTextBoxColumn";
+            // 
+            // chapterNameDataGridViewTextBoxColumn
+            // 
+            this.chapterNameDataGridViewTextBoxColumn.DataPropertyName = "ChapterName";
+            this.chapterNameDataGridViewTextBoxColumn.HeaderText = "ChapterName";
+            this.chapterNameDataGridViewTextBoxColumn.Name = "chapterNameDataGridViewTextBoxColumn";
+            // 
+            // environmentDataGridViewTextBoxColumn
+            // 
+            this.environmentDataGridViewTextBoxColumn.DataPropertyName = "Environment";
+            this.environmentDataGridViewTextBoxColumn.HeaderText = "Environment";
+            this.environmentDataGridViewTextBoxColumn.Name = "environmentDataGridViewTextBoxColumn";
+            // 
+            // bossDataGridViewTextBoxColumn
+            // 
+            this.bossDataGridViewTextBoxColumn.DataPropertyName = "Boss";
+            this.bossDataGridViewTextBoxColumn.HeaderText = "Boss";
+            this.bossDataGridViewTextBoxColumn.Name = "bossDataGridViewTextBoxColumn";
+            // 
+            // costDataGridViewTextBoxColumn
+            // 
+            this.costDataGridViewTextBoxColumn.DataPropertyName = "Cost";
+            this.costDataGridViewTextBoxColumn.HeaderText = "Cost";
+            this.costDataGridViewTextBoxColumn.Name = "costDataGridViewTextBoxColumn";
+            // 
+            // chapterBindingSource
+            // 
+            this.chapterBindingSource.DataMember = "Chapter";
+            this.chapterBindingSource.DataSource = this.zhengruiDataSet3;
+            // 
+            // zhengruiDataSet3
+            // 
+            this.zhengruiDataSet3.DataSetName = "zhengruiDataSet3";
+            this.zhengruiDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // txtEpisode
+            // 
+            this.txtEpisode.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtEpisode.Location = new System.Drawing.Point(3, 3);
+            this.txtEpisode.Name = "txtEpisode";
+            this.txtEpisode.Size = new System.Drawing.Size(570, 20);
+            this.txtEpisode.TabIndex = 2;
             // 
             // label1
             // 
@@ -127,124 +242,9 @@
             this.label5.TabIndex = 5;
             this.label5.Text = "Cost:";
             // 
-            // btnSearch
-            // 
-            this.btnSearch.Location = new System.Drawing.Point(3, 138);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(75, 21);
-            this.btnSearch.TabIndex = 0;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = true;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
-            // results
-            // 
-            this.results.AutoGenerateColumns = false;
-            this.results.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.results.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.chapterIdDataGridViewTextBoxColumn,
-            this.episodeDataGridViewTextBoxColumn,
-            this.chapterNameDataGridViewTextBoxColumn,
-            this.environmentDataGridViewTextBoxColumn,
-            this.bossDataGridViewTextBoxColumn,
-            this.costDataGridViewTextBoxColumn});
-            this.results.DataSource = this.chapterBindingSource;
-            this.results.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.results.Location = new System.Drawing.Point(3, 165);
-            this.results.Name = "results";
-            this.results.Size = new System.Drawing.Size(570, 282);
-            this.results.TabIndex = 1;
-            // 
-            // txtEpisode
-            // 
-            this.txtEpisode.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtEpisode.Location = new System.Drawing.Point(3, 3);
-            this.txtEpisode.Name = "txtEpisode";
-            this.txtEpisode.Size = new System.Drawing.Size(570, 20);
-            this.txtEpisode.TabIndex = 2;
-            // 
-            // txtChapterName
-            // 
-            this.txtChapterName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtChapterName.Location = new System.Drawing.Point(3, 30);
-            this.txtChapterName.Name = "txtChapterName";
-            this.txtChapterName.Size = new System.Drawing.Size(570, 20);
-            this.txtChapterName.TabIndex = 3;
-            // 
-            // txtEnvironment
-            // 
-            this.txtEnvironment.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtEnvironment.Location = new System.Drawing.Point(3, 57);
-            this.txtEnvironment.Name = "txtEnvironment";
-            this.txtEnvironment.Size = new System.Drawing.Size(570, 20);
-            this.txtEnvironment.TabIndex = 4;
-            // 
-            // txtBoss
-            // 
-            this.txtBoss.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtBoss.Location = new System.Drawing.Point(3, 84);
-            this.txtBoss.Name = "txtBoss";
-            this.txtBoss.Size = new System.Drawing.Size(570, 20);
-            this.txtBoss.TabIndex = 5;
-            // 
-            // txtCost
-            // 
-            this.txtCost.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtCost.Location = new System.Drawing.Point(3, 111);
-            this.txtCost.Name = "txtCost";
-            this.txtCost.Size = new System.Drawing.Size(570, 20);
-            this.txtCost.TabIndex = 6;
-            // 
-            // zhengruiDataSet3
-            // 
-            this.zhengruiDataSet3.DataSetName = "zhengruiDataSet3";
-            this.zhengruiDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // chapterBindingSource
-            // 
-            this.chapterBindingSource.DataMember = "Chapter";
-            this.chapterBindingSource.DataSource = this.zhengruiDataSet3;
-            // 
             // chapterTableAdapter
             // 
             this.chapterTableAdapter.ClearBeforeFill = true;
-            // 
-            // chapterIdDataGridViewTextBoxColumn
-            // 
-            this.chapterIdDataGridViewTextBoxColumn.DataPropertyName = "ChapterId";
-            this.chapterIdDataGridViewTextBoxColumn.HeaderText = "ChapterId";
-            this.chapterIdDataGridViewTextBoxColumn.Name = "chapterIdDataGridViewTextBoxColumn";
-            this.chapterIdDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // episodeDataGridViewTextBoxColumn
-            // 
-            this.episodeDataGridViewTextBoxColumn.DataPropertyName = "Episode";
-            this.episodeDataGridViewTextBoxColumn.HeaderText = "Episode";
-            this.episodeDataGridViewTextBoxColumn.Name = "episodeDataGridViewTextBoxColumn";
-            // 
-            // chapterNameDataGridViewTextBoxColumn
-            // 
-            this.chapterNameDataGridViewTextBoxColumn.DataPropertyName = "ChapterName";
-            this.chapterNameDataGridViewTextBoxColumn.HeaderText = "ChapterName";
-            this.chapterNameDataGridViewTextBoxColumn.Name = "chapterNameDataGridViewTextBoxColumn";
-            // 
-            // environmentDataGridViewTextBoxColumn
-            // 
-            this.environmentDataGridViewTextBoxColumn.DataPropertyName = "Environment";
-            this.environmentDataGridViewTextBoxColumn.HeaderText = "Environment";
-            this.environmentDataGridViewTextBoxColumn.Name = "environmentDataGridViewTextBoxColumn";
-            // 
-            // bossDataGridViewTextBoxColumn
-            // 
-            this.bossDataGridViewTextBoxColumn.DataPropertyName = "Boss";
-            this.bossDataGridViewTextBoxColumn.HeaderText = "Boss";
-            this.bossDataGridViewTextBoxColumn.Name = "bossDataGridViewTextBoxColumn";
-            // 
-            // costDataGridViewTextBoxColumn
-            // 
-            this.costDataGridViewTextBoxColumn.DataPropertyName = "Cost";
-            this.costDataGridViewTextBoxColumn.HeaderText = "Cost";
-            this.costDataGridViewTextBoxColumn.Name = "costDataGridViewTextBoxColumn";
             // 
             // ChapterSearch
             // 
@@ -263,8 +263,8 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.results)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.zhengruiDataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chapterBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zhengruiDataSet3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

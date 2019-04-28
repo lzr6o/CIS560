@@ -39,19 +39,19 @@
             this.txtType = new System.Windows.Forms.TextBox();
             this.txtFaction = new System.Windows.Forms.TextBox();
             this.results = new System.Windows.Forms.DataGridView();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.zhengruiDataSet1 = new Crusader.zhengruiDataSet1();
-            this.nPCBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.nPCTableAdapter = new Crusader.zhengruiDataSet1TableAdapters.NPCTableAdapter();
             this.nPCIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nPCNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.skillDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.typeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.factionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nPCBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.zhengruiDataSet1 = new Crusader.zhengruiDataSet1();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.nPCTableAdapter = new Crusader.zhengruiDataSet1TableAdapters.NPCTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.results)).BeginInit();
-            this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.zhengruiDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nPCBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zhengruiDataSet1)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnSearch
@@ -149,44 +149,6 @@
             this.results.Size = new System.Drawing.Size(455, 439);
             this.results.TabIndex = 9;
             // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.txtNPCName, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.txtSkill, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.txtType, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.txtFaction, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.results, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.btnSearch, 0, 4);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(66, 0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 6;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(461, 590);
-            this.tableLayoutPanel1.TabIndex = 10;
-            // 
-            // zhengruiDataSet1
-            // 
-            this.zhengruiDataSet1.DataSetName = "zhengruiDataSet1";
-            this.zhengruiDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // nPCBindingSource
-            // 
-            this.nPCBindingSource.DataMember = "NPC";
-            this.nPCBindingSource.DataSource = this.zhengruiDataSet1;
-            // 
-            // nPCTableAdapter
-            // 
-            this.nPCTableAdapter.ClearBeforeFill = true;
-            // 
             // nPCIdDataGridViewTextBoxColumn
             // 
             this.nPCIdDataGridViewTextBoxColumn.DataPropertyName = "NPCId";
@@ -218,6 +180,44 @@
             this.factionDataGridViewTextBoxColumn.HeaderText = "Faction";
             this.factionDataGridViewTextBoxColumn.Name = "factionDataGridViewTextBoxColumn";
             // 
+            // nPCBindingSource
+            // 
+            this.nPCBindingSource.DataMember = "NPC";
+            this.nPCBindingSource.DataSource = this.zhengruiDataSet1;
+            // 
+            // zhengruiDataSet1
+            // 
+            this.zhengruiDataSet1.DataSetName = "zhengruiDataSet1";
+            this.zhengruiDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.txtNPCName, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.txtSkill, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.txtType, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.txtFaction, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.results, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.btnSearch, 0, 4);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(66, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 6;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(461, 590);
+            this.tableLayoutPanel1.TabIndex = 10;
+            // 
+            // nPCTableAdapter
+            // 
+            this.nPCTableAdapter.ClearBeforeFill = true;
+            // 
             // NPCSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -232,10 +232,10 @@
             this.Text = "NPCSearch";
             this.Load += new System.EventHandler(this.NPCSearch_Load);
             ((System.ComponentModel.ISupportInitialize)(this.results)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nPCBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zhengruiDataSet1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.zhengruiDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nPCBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

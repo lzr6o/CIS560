@@ -30,3 +30,4 @@ C:\Users\zhengrui\Source\Repos\CIS560\Crusader\Crusader\obj\Debug\Crusader.NPCSe
 C:\Users\zhengrui\source\Repos\CIS560\Crusader\Crusader\obj\Debug\Crusader.HeroSearch.resources
 C:\Users\zhengrui\source\Repos\CIS560\Crusader\Crusader\obj\Debug\Crusader.ChapterSearch.resources
 C:\Users\zhengrui\source\Repos\CIS560\Crusader\Crusader\obj\Debug\Crusader.ResourceSearch.resources
+C:\Users\zhengrui\source\Repos\CIS560\Crusader\Crusader\obj\Debug\Crusader.Join.resources

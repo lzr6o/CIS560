@@ -30,26 +30,15 @@
         {
             this.components = new System.ComponentModel.Container();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtHeroName = new System.Windows.Forms.TextBox();
-            this.txtHP = new System.Windows.Forms.TextBox();
-            this.txtATK = new System.Windows.Forms.TextBox();
-            this.txtSoulboundWeapon = new System.Windows.Forms.TextBox();
-            this.txtContract = new System.Windows.Forms.TextBox();
-            this.txtFaction = new System.Windows.Forms.TextBox();
             this.txtClass = new System.Windows.Forms.TextBox();
+            this.txtFaction = new System.Windows.Forms.TextBox();
+            this.txtContract = new System.Windows.Forms.TextBox();
+            this.txtSoulboundWeapon = new System.Windows.Forms.TextBox();
+            this.txtATK = new System.Windows.Forms.TextBox();
+            this.txtHP = new System.Windows.Forms.TextBox();
+            this.txtHeroName = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.results = new System.Windows.Forms.DataGridView();
-            this.zhengruiDataSet2 = new Crusader.zhengruiDataSet2();
-            this.heroBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.heroTableAdapter = new Crusader.zhengruiDataSet2TableAdapters.HeroTableAdapter();
             this.heroIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.heroNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,10 +47,21 @@
             this.contractDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.factionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.classDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.heroBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.zhengruiDataSet2 = new Crusader.zhengruiDataSet2();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.heroTableAdapter = new Crusader.zhengruiDataSet2TableAdapters.HeroTableAdapter();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.results)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.zhengruiDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.heroBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zhengruiDataSet2)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -92,6 +92,151 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 52F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(537, 450);
             this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // txtClass
+            // 
+            this.txtClass.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtClass.Location = new System.Drawing.Point(3, 165);
+            this.txtClass.Name = "txtClass";
+            this.txtClass.Size = new System.Drawing.Size(531, 20);
+            this.txtClass.TabIndex = 6;
+            // 
+            // txtFaction
+            // 
+            this.txtFaction.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtFaction.Location = new System.Drawing.Point(3, 138);
+            this.txtFaction.Name = "txtFaction";
+            this.txtFaction.Size = new System.Drawing.Size(531, 20);
+            this.txtFaction.TabIndex = 5;
+            // 
+            // txtContract
+            // 
+            this.txtContract.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtContract.Location = new System.Drawing.Point(3, 111);
+            this.txtContract.Name = "txtContract";
+            this.txtContract.Size = new System.Drawing.Size(531, 20);
+            this.txtContract.TabIndex = 4;
+            // 
+            // txtSoulboundWeapon
+            // 
+            this.txtSoulboundWeapon.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtSoulboundWeapon.Location = new System.Drawing.Point(3, 84);
+            this.txtSoulboundWeapon.Name = "txtSoulboundWeapon";
+            this.txtSoulboundWeapon.Size = new System.Drawing.Size(531, 20);
+            this.txtSoulboundWeapon.TabIndex = 3;
+            // 
+            // txtATK
+            // 
+            this.txtATK.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtATK.Location = new System.Drawing.Point(3, 57);
+            this.txtATK.Name = "txtATK";
+            this.txtATK.Size = new System.Drawing.Size(531, 20);
+            this.txtATK.TabIndex = 2;
+            // 
+            // txtHP
+            // 
+            this.txtHP.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtHP.Location = new System.Drawing.Point(3, 30);
+            this.txtHP.Name = "txtHP";
+            this.txtHP.Size = new System.Drawing.Size(531, 20);
+            this.txtHP.TabIndex = 1;
+            // 
+            // txtHeroName
+            // 
+            this.txtHeroName.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtHeroName.Location = new System.Drawing.Point(3, 3);
+            this.txtHeroName.Name = "txtHeroName";
+            this.txtHeroName.Size = new System.Drawing.Size(531, 20);
+            this.txtHeroName.TabIndex = 0;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Location = new System.Drawing.Point(3, 192);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(75, 21);
+            this.btnSearch.TabIndex = 7;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // results
+            // 
+            this.results.AutoGenerateColumns = false;
+            this.results.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.results.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.heroIdDataGridViewTextBoxColumn,
+            this.heroNameDataGridViewTextBoxColumn,
+            this.hPDataGridViewTextBoxColumn,
+            this.aTKDataGridViewTextBoxColumn,
+            this.soulboundWeaponDataGridViewTextBoxColumn,
+            this.contractDataGridViewTextBoxColumn,
+            this.factionDataGridViewTextBoxColumn,
+            this.classDataGridViewTextBoxColumn});
+            this.results.DataSource = this.heroBindingSource;
+            this.results.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.results.Location = new System.Drawing.Point(3, 219);
+            this.results.Name = "results";
+            this.results.Size = new System.Drawing.Size(531, 228);
+            this.results.TabIndex = 8;
+            // 
+            // heroIdDataGridViewTextBoxColumn
+            // 
+            this.heroIdDataGridViewTextBoxColumn.DataPropertyName = "HeroId";
+            this.heroIdDataGridViewTextBoxColumn.HeaderText = "HeroId";
+            this.heroIdDataGridViewTextBoxColumn.Name = "heroIdDataGridViewTextBoxColumn";
+            this.heroIdDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // heroNameDataGridViewTextBoxColumn
+            // 
+            this.heroNameDataGridViewTextBoxColumn.DataPropertyName = "HeroName";
+            this.heroNameDataGridViewTextBoxColumn.HeaderText = "HeroName";
+            this.heroNameDataGridViewTextBoxColumn.Name = "heroNameDataGridViewTextBoxColumn";
+            // 
+            // hPDataGridViewTextBoxColumn
+            // 
+            this.hPDataGridViewTextBoxColumn.DataPropertyName = "HP";
+            this.hPDataGridViewTextBoxColumn.HeaderText = "HP";
+            this.hPDataGridViewTextBoxColumn.Name = "hPDataGridViewTextBoxColumn";
+            // 
+            // aTKDataGridViewTextBoxColumn
+            // 
+            this.aTKDataGridViewTextBoxColumn.DataPropertyName = "ATK";
+            this.aTKDataGridViewTextBoxColumn.HeaderText = "ATK";
+            this.aTKDataGridViewTextBoxColumn.Name = "aTKDataGridViewTextBoxColumn";
+            // 
+            // soulboundWeaponDataGridViewTextBoxColumn
+            // 
+            this.soulboundWeaponDataGridViewTextBoxColumn.DataPropertyName = "SoulboundWeapon";
+            this.soulboundWeaponDataGridViewTextBoxColumn.HeaderText = "SoulboundWeapon";
+            this.soulboundWeaponDataGridViewTextBoxColumn.Name = "soulboundWeaponDataGridViewTextBoxColumn";
+            // 
+            // contractDataGridViewTextBoxColumn
+            // 
+            this.contractDataGridViewTextBoxColumn.DataPropertyName = "Contract";
+            this.contractDataGridViewTextBoxColumn.HeaderText = "Contract";
+            this.contractDataGridViewTextBoxColumn.Name = "contractDataGridViewTextBoxColumn";
+            // 
+            // factionDataGridViewTextBoxColumn
+            // 
+            this.factionDataGridViewTextBoxColumn.DataPropertyName = "Faction";
+            this.factionDataGridViewTextBoxColumn.HeaderText = "Faction";
+            this.factionDataGridViewTextBoxColumn.Name = "factionDataGridViewTextBoxColumn";
+            // 
+            // classDataGridViewTextBoxColumn
+            // 
+            this.classDataGridViewTextBoxColumn.DataPropertyName = "Class";
+            this.classDataGridViewTextBoxColumn.HeaderText = "Class";
+            this.classDataGridViewTextBoxColumn.Name = "classDataGridViewTextBoxColumn";
+            // 
+            // heroBindingSource
+            // 
+            this.heroBindingSource.DataMember = "Hero";
+            this.heroBindingSource.DataSource = this.zhengruiDataSet2;
+            // 
+            // zhengruiDataSet2
+            // 
+            this.zhengruiDataSet2.DataSetName = "zhengruiDataSet2";
+            this.zhengruiDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label1
             // 
@@ -165,154 +310,9 @@
             this.label8.TabIndex = 5;
             this.label8.Text = "Class:";
             // 
-            // txtHeroName
-            // 
-            this.txtHeroName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtHeroName.Location = new System.Drawing.Point(3, 3);
-            this.txtHeroName.Name = "txtHeroName";
-            this.txtHeroName.Size = new System.Drawing.Size(531, 20);
-            this.txtHeroName.TabIndex = 0;
-            // 
-            // txtHP
-            // 
-            this.txtHP.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtHP.Location = new System.Drawing.Point(3, 30);
-            this.txtHP.Name = "txtHP";
-            this.txtHP.Size = new System.Drawing.Size(531, 20);
-            this.txtHP.TabIndex = 1;
-            // 
-            // txtATK
-            // 
-            this.txtATK.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtATK.Location = new System.Drawing.Point(3, 57);
-            this.txtATK.Name = "txtATK";
-            this.txtATK.Size = new System.Drawing.Size(531, 20);
-            this.txtATK.TabIndex = 2;
-            // 
-            // txtSoulboundWeapon
-            // 
-            this.txtSoulboundWeapon.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtSoulboundWeapon.Location = new System.Drawing.Point(3, 84);
-            this.txtSoulboundWeapon.Name = "txtSoulboundWeapon";
-            this.txtSoulboundWeapon.Size = new System.Drawing.Size(531, 20);
-            this.txtSoulboundWeapon.TabIndex = 3;
-            // 
-            // txtContract
-            // 
-            this.txtContract.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtContract.Location = new System.Drawing.Point(3, 111);
-            this.txtContract.Name = "txtContract";
-            this.txtContract.Size = new System.Drawing.Size(531, 20);
-            this.txtContract.TabIndex = 4;
-            // 
-            // txtFaction
-            // 
-            this.txtFaction.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtFaction.Location = new System.Drawing.Point(3, 138);
-            this.txtFaction.Name = "txtFaction";
-            this.txtFaction.Size = new System.Drawing.Size(531, 20);
-            this.txtFaction.TabIndex = 5;
-            // 
-            // txtClass
-            // 
-            this.txtClass.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtClass.Location = new System.Drawing.Point(3, 165);
-            this.txtClass.Name = "txtClass";
-            this.txtClass.Size = new System.Drawing.Size(531, 20);
-            this.txtClass.TabIndex = 6;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.Location = new System.Drawing.Point(3, 192);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(75, 21);
-            this.btnSearch.TabIndex = 7;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = true;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
-            // results
-            // 
-            this.results.AutoGenerateColumns = false;
-            this.results.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.results.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.heroIdDataGridViewTextBoxColumn,
-            this.heroNameDataGridViewTextBoxColumn,
-            this.hPDataGridViewTextBoxColumn,
-            this.aTKDataGridViewTextBoxColumn,
-            this.soulboundWeaponDataGridViewTextBoxColumn,
-            this.contractDataGridViewTextBoxColumn,
-            this.factionDataGridViewTextBoxColumn,
-            this.classDataGridViewTextBoxColumn});
-            this.results.DataSource = this.heroBindingSource;
-            this.results.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.results.Location = new System.Drawing.Point(3, 219);
-            this.results.Name = "results";
-            this.results.Size = new System.Drawing.Size(531, 228);
-            this.results.TabIndex = 8;
-            // 
-            // zhengruiDataSet2
-            // 
-            this.zhengruiDataSet2.DataSetName = "zhengruiDataSet2";
-            this.zhengruiDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // heroBindingSource
-            // 
-            this.heroBindingSource.DataMember = "Hero";
-            this.heroBindingSource.DataSource = this.zhengruiDataSet2;
-            // 
             // heroTableAdapter
             // 
             this.heroTableAdapter.ClearBeforeFill = true;
-            // 
-            // heroIdDataGridViewTextBoxColumn
-            // 
-            this.heroIdDataGridViewTextBoxColumn.DataPropertyName = "HeroId";
-            this.heroIdDataGridViewTextBoxColumn.HeaderText = "HeroId";
-            this.heroIdDataGridViewTextBoxColumn.Name = "heroIdDataGridViewTextBoxColumn";
-            this.heroIdDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // heroNameDataGridViewTextBoxColumn
-            // 
-            this.heroNameDataGridViewTextBoxColumn.DataPropertyName = "HeroName";
-            this.heroNameDataGridViewTextBoxColumn.HeaderText = "HeroName";
-            this.heroNameDataGridViewTextBoxColumn.Name = "heroNameDataGridViewTextBoxColumn";
-            // 
-            // hPDataGridViewTextBoxColumn
-            // 
-            this.hPDataGridViewTextBoxColumn.DataPropertyName = "HP";
-            this.hPDataGridViewTextBoxColumn.HeaderText = "HP";
-            this.hPDataGridViewTextBoxColumn.Name = "hPDataGridViewTextBoxColumn";
-            // 
-            // aTKDataGridViewTextBoxColumn
-            // 
-            this.aTKDataGridViewTextBoxColumn.DataPropertyName = "ATK";
-            this.aTKDataGridViewTextBoxColumn.HeaderText = "ATK";
-            this.aTKDataGridViewTextBoxColumn.Name = "aTKDataGridViewTextBoxColumn";
-            // 
-            // soulboundWeaponDataGridViewTextBoxColumn
-            // 
-            this.soulboundWeaponDataGridViewTextBoxColumn.DataPropertyName = "SoulboundWeapon";
-            this.soulboundWeaponDataGridViewTextBoxColumn.HeaderText = "SoulboundWeapon";
-            this.soulboundWeaponDataGridViewTextBoxColumn.Name = "soulboundWeaponDataGridViewTextBoxColumn";
-            // 
-            // contractDataGridViewTextBoxColumn
-            // 
-            this.contractDataGridViewTextBoxColumn.DataPropertyName = "Contract";
-            this.contractDataGridViewTextBoxColumn.HeaderText = "Contract";
-            this.contractDataGridViewTextBoxColumn.Name = "contractDataGridViewTextBoxColumn";
-            // 
-            // factionDataGridViewTextBoxColumn
-            // 
-            this.factionDataGridViewTextBoxColumn.DataPropertyName = "Faction";
-            this.factionDataGridViewTextBoxColumn.HeaderText = "Faction";
-            this.factionDataGridViewTextBoxColumn.Name = "factionDataGridViewTextBoxColumn";
-            // 
-            // classDataGridViewTextBoxColumn
-            // 
-            this.classDataGridViewTextBoxColumn.DataPropertyName = "Class";
-            this.classDataGridViewTextBoxColumn.HeaderText = "Class";
-            this.classDataGridViewTextBoxColumn.Name = "classDataGridViewTextBoxColumn";
             // 
             // HeroSearch
             // 
@@ -334,8 +334,8 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.results)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.zhengruiDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.heroBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zhengruiDataSet2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

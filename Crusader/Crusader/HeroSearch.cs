@@ -15,7 +15,6 @@ namespace Crusader
     {
         String conn_string = "Data Source=mssql.cs.ksu.edu;Initial Catalog=zhengrui;Integrated Security=True";
         String q = "";
-        String error_msg = "";
         SqlConnection conn = null;
 
         public HeroSearch()
@@ -32,28 +31,26 @@ namespace Crusader
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            conn.Open();
-            string HeroName = txtHeroName.Text;
-            string HP = txtHP.Text;
-            string ATK = txtATK.Text;
-            string SoulboundWeapon = txtSoulboundWeapon.Text;
-            string Contract = txtContract.Text;
-            string Faction = txtFaction.Text;
-            string Class = txtClass.Text;
-
-            string order = "SELECT * FROM Crusader.Hero h WHERE ";
-            q = "";
-            if (HeroName != "") { q = q + "h.HeroName LIKE '%" + HeroName + "%' AND "; }
-            if (HP != "") { q = q + "h.HP LIKE '%" + HP + "%' AND "; }
-            if (ATK != "") { q = q + "h.ATK LIKE '%" + ATK + "%' AND "; }
-            if (SoulboundWeapon != "") { q = q + "h.SoulboundWeapon LIKE '%" + SoulboundWeapon + "%' AND "; }
-            if (Contract != "") { q = q + "h.[Contract] LIKE '%" + Contract + "%' AND "; }
-            if (Faction != "") { q = q + "h.Faction LIKE '%" + Faction + "%' AND "; }
-            if (Class != "") { q = q + "h.Class LIKE '%" + Class + "%' AND "; }
-
-            order = order + q.Remove(q.Length - 4, 3);
             try
             {
+                conn.Open();
+                string HeroName = txtHeroName.Text;
+                string HP = txtHP.Text;
+                string ATK = txtATK.Text;
+                string SoulboundWeapon = txtSoulboundWeapon.Text;
+                string Contract = txtContract.Text;
+                string Faction = txtFaction.Text;
+                string Class = txtClass.Text;
+                string order = "SELECT * FROM Crusader.Hero h WHERE ";
+                q = "";
+                if (HeroName != "") { q = q + "h.HeroName LIKE '%" + HeroName + "%' AND "; }
+                if (HP != "") { q = q + "h.HP LIKE '%" + HP + "%' AND "; }
+                if (ATK != "") { q = q + "h.ATK LIKE '%" + ATK + "%' AND "; }
+                if (SoulboundWeapon != "") { q = q + "h.SoulboundWeapon LIKE '%" + SoulboundWeapon + "%' AND "; }
+                if (Contract != "") { q = q + "h.[Contract] LIKE '%" + Contract + "%' AND "; }
+                if (Faction != "") { q = q + "h.Faction LIKE '%" + Faction + "%' AND "; }
+                if (Class != "") { q = q + "h.Class LIKE '%" + Class + "%' AND "; }
+                order = order + q.Remove(q.Length - 4, 3);            
                 SqlCommand cmd = new SqlCommand(order, conn);
                 SqlDataAdapter a = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
@@ -61,12 +58,10 @@ namespace Crusader
                 a.Fill(dt);
                 results.DataSource = dt;
                 results.AutoResizeColumns();
-
             }
             catch (Exception ex)
             {
-                error_msg = ex.Message;
-                MessageBox.Show(error_msg);
+                MessageBox.Show("Empty Input");
             }
             conn.Close();
         }

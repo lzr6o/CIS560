@@ -32,6 +32,7 @@
             this.btnHero = new System.Windows.Forms.Button();
             this.btnChapter = new System.Windows.Forms.Button();
             this.btnResource = new System.Windows.Forms.Button();
+            this.btnJoin = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnNPC
@@ -46,7 +47,7 @@
             // 
             // btnHero
             // 
-            this.btnHero.Location = new System.Drawing.Point(200, 123);
+            this.btnHero.Location = new System.Drawing.Point(34, 129);
             this.btnHero.Name = "btnHero";
             this.btnHero.Size = new System.Drawing.Size(75, 23);
             this.btnHero.TabIndex = 1;
@@ -66,7 +67,7 @@
             // 
             // btnResource
             // 
-            this.btnResource.Location = new System.Drawing.Point(135, 181);
+            this.btnResource.Location = new System.Drawing.Point(157, 129);
             this.btnResource.Name = "btnResource";
             this.btnResource.Size = new System.Drawing.Size(75, 23);
             this.btnResource.TabIndex = 1;
@@ -74,11 +75,22 @@
             this.btnResource.UseVisualStyleBackColor = true;
             this.btnResource.Click += new System.EventHandler(this.btnResource_Click);
             // 
+            // btnJoin
+            // 
+            this.btnJoin.Location = new System.Drawing.Point(94, 202);
+            this.btnJoin.Name = "btnJoin";
+            this.btnJoin.Size = new System.Drawing.Size(75, 23);
+            this.btnJoin.TabIndex = 2;
+            this.btnJoin.Text = "Join";
+            this.btnJoin.UseVisualStyleBackColor = true;
+            this.btnJoin.Click += new System.EventHandler(this.btnJoin_Click);
+            // 
             // SearchCategory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(394, 299);
+            this.ClientSize = new System.Drawing.Size(269, 283);
+            this.Controls.Add(this.btnJoin);
             this.Controls.Add(this.btnResource);
             this.Controls.Add(this.btnChapter);
             this.Controls.Add(this.btnHero);
@@ -95,5 +107,6 @@
         private System.Windows.Forms.Button btnHero;
         private System.Windows.Forms.Button btnChapter;
         private System.Windows.Forms.Button btnResource;
+        private System.Windows.Forms.Button btnJoin;
     }
 }
