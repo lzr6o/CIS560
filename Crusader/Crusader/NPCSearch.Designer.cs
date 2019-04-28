@@ -40,8 +40,6 @@
             this.txtFaction = new System.Windows.Forms.TextBox();
             this.results = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.txtKeyWord = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.zhengruiDataSet1 = new Crusader.zhengruiDataSet1();
             this.nPCBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nPCTableAdapter = new Crusader.zhengruiDataSet1TableAdapters.NPCTableAdapter();
@@ -58,7 +56,7 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(3, 148);
+            this.btnSearch.Location = new System.Drawing.Point(3, 119);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
             this.btnSearch.TabIndex = 0;
@@ -145,9 +143,10 @@
             this.typeDataGridViewTextBoxColumn,
             this.factionDataGridViewTextBoxColumn});
             this.results.DataSource = this.nPCBindingSource;
-            this.results.Location = new System.Drawing.Point(3, 177);
+            this.results.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.results.Location = new System.Drawing.Point(3, 148);
             this.results.Name = "results";
-            this.results.Size = new System.Drawing.Size(455, 410);
+            this.results.Size = new System.Drawing.Size(455, 439);
             this.results.TabIndex = 9;
             // 
             // tableLayoutPanel1
@@ -158,39 +157,21 @@
             this.tableLayoutPanel1.Controls.Add(this.txtSkill, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.txtType, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.txtFaction, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.results, 0, 6);
-            this.tableLayoutPanel1.Controls.Add(this.txtKeyWord, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.btnSearch, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.results, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.btnSearch, 0, 4);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(66, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 7;
+            this.tableLayoutPanel1.RowCount = 6;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(461, 590);
             this.tableLayoutPanel1.TabIndex = 10;
-            // 
-            // txtKeyWord
-            // 
-            this.txtKeyWord.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtKeyWord.Location = new System.Drawing.Point(3, 119);
-            this.txtKeyWord.Name = "txtKeyWord";
-            this.txtKeyWord.Size = new System.Drawing.Size(455, 20);
-            this.txtKeyWord.TabIndex = 10;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(5, 122);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(57, 13);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "Key Word:";
             // 
             // zhengruiDataSet1
             // 
@@ -242,7 +223,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(527, 590);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -274,8 +254,6 @@
         private System.Windows.Forms.TextBox txtFaction;
         private System.Windows.Forms.DataGridView results;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.TextBox txtKeyWord;
-        private System.Windows.Forms.Label label5;
         private zhengruiDataSet1 zhengruiDataSet1;
         private System.Windows.Forms.BindingSource nPCBindingSource;
         private zhengruiDataSet1TableAdapters.NPCTableAdapter nPCTableAdapter;

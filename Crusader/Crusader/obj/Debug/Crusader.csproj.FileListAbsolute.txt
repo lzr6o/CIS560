@@ -27,3 +27,4 @@ C:\Users\zhengrui\Source\Repos\CIS560\Crusader\Crusader\obj\Debug\Crusader.cspro
 C:\Users\zhengrui\Source\Repos\CIS560\Crusader\Crusader\obj\Debug\Crusader.SignUp.resources
 C:\Users\zhengrui\Source\Repos\CIS560\Crusader\Crusader\obj\Debug\Crusader.SearchCategory.resources
 C:\Users\zhengrui\Source\Repos\CIS560\Crusader\Crusader\obj\Debug\Crusader.NPCSearch.resources
+C:\Users\zhengrui\source\Repos\CIS560\Crusader\Crusader\obj\Debug\Crusader.HeroSearch.resources

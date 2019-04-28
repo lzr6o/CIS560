@@ -24,22 +24,22 @@ namespace Crusader
 
         private void btnChapter_Click(object sender, EventArgs e)
         {
-
+            new ChapterSearch().ShowDialog();
         }
 
         private void btnUser_Click(object sender, EventArgs e)
         {
-
+            new UserSearch().ShowDialog();
         }
 
         private void btnHero_Click(object sender, EventArgs e)
         {
-
+            new HeroSearch().ShowDialog();
         }
 
         private void btnResource_Click(object sender, EventArgs e)
         {
-
+            new ResourceSearch().ShowDialog();
         }
     }
 }
