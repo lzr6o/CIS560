@@ -31,7 +31,7 @@ namespace Crusader
             string type = txtType.Text;
             string faction = txtFaction.Text;
             string order = "SELECT * FROM Crusader.NPC n WHERE ";
-            string q = "";
+            q = "";
             if (NPCName != "") { q = q + "n.NPCName LIKE '%" + NPCName + "%' AND "; }
             if (skill != "") { q = q + "n.Skill LIKE '%" + skill + "%' AND "; }
             if (type != "") { q = q + "n.[Type] LIKE '%" + type + "%' AND "; }
