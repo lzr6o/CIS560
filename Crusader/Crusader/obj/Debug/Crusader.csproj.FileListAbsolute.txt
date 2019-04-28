@@ -26,3 +26,4 @@ C:\Users\zhengrui\Source\Repos\CIS560\Crusader\Crusader\bin\Debug\EntityFramewor
 C:\Users\zhengrui\Source\Repos\CIS560\Crusader\Crusader\obj\Debug\Crusader.csproj.CopyComplete
 C:\Users\zhengrui\Source\Repos\CIS560\Crusader\Crusader\obj\Debug\Crusader.SignUp.resources
 C:\Users\zhengrui\Source\Repos\CIS560\Crusader\Crusader\obj\Debug\Crusader.SearchCategory.resources
+C:\Users\zhengrui\Source\Repos\CIS560\Crusader\Crusader\obj\Debug\Crusader.NPCSearch.resources
