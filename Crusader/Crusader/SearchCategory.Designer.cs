@@ -32,7 +32,6 @@
             this.btnHero = new System.Windows.Forms.Button();
             this.btnChapter = new System.Windows.Forms.Button();
             this.btnResource = new System.Windows.Forms.Button();
-            this.btnUser = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnNPC
@@ -75,22 +74,11 @@
             this.btnResource.UseVisualStyleBackColor = true;
             this.btnResource.Click += new System.EventHandler(this.btnResource_Click);
             // 
-            // btnUser
-            // 
-            this.btnUser.Location = new System.Drawing.Point(60, 123);
-            this.btnUser.Name = "btnUser";
-            this.btnUser.Size = new System.Drawing.Size(75, 23);
-            this.btnUser.TabIndex = 1;
-            this.btnUser.Text = "User";
-            this.btnUser.UseVisualStyleBackColor = true;
-            this.btnUser.Click += new System.EventHandler(this.btnUser_Click);
-            // 
             // SearchCategory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(394, 299);
-            this.Controls.Add(this.btnUser);
             this.Controls.Add(this.btnResource);
             this.Controls.Add(this.btnChapter);
             this.Controls.Add(this.btnHero);
@@ -107,6 +95,5 @@
         private System.Windows.Forms.Button btnHero;
         private System.Windows.Forms.Button btnChapter;
         private System.Windows.Forms.Button btnResource;
-        private System.Windows.Forms.Button btnUser;
     }
 }

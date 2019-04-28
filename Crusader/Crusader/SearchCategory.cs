@@ -29,7 +29,6 @@ namespace Crusader
 
         private void btnUser_Click(object sender, EventArgs e)
         {
-            new UserSearch().ShowDialog();
         }
 
         private void btnHero_Click(object sender, EventArgs e)
