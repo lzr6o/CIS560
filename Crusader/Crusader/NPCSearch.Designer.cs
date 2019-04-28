@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnSearch = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -37,11 +38,27 @@
             this.txtSkill = new System.Windows.Forms.TextBox();
             this.txtType = new System.Windows.Forms.TextBox();
             this.txtFaction = new System.Windows.Forms.TextBox();
+            this.results = new System.Windows.Forms.DataGridView();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.txtKeyWord = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.zhengruiDataSet1 = new Crusader.zhengruiDataSet1();
+            this.nPCBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.nPCTableAdapter = new Crusader.zhengruiDataSet1TableAdapters.NPCTableAdapter();
+            this.nPCIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nPCNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.skillDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.typeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.factionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.results)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.zhengruiDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nPCBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(156, 307);
+            this.btnSearch.Location = new System.Drawing.Point(3, 148);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
             this.btnSearch.TabIndex = 0;
@@ -52,7 +69,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(108, 60);
+            this.label1.Location = new System.Drawing.Point(2, 6);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(60, 13);
             this.label1.TabIndex = 1;
@@ -61,7 +78,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(108, 120);
+            this.label2.Location = new System.Drawing.Point(21, 35);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(29, 13);
             this.label2.TabIndex = 2;
@@ -70,7 +87,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(108, 174);
+            this.label3.Location = new System.Drawing.Point(16, 64);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(34, 13);
             this.label3.TabIndex = 3;
@@ -79,7 +96,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(108, 233);
+            this.label4.Location = new System.Drawing.Point(12, 93);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(45, 13);
             this.label4.TabIndex = 4;
@@ -87,49 +104,158 @@
             // 
             // txtNPCName
             // 
-            this.txtNPCName.Location = new System.Drawing.Point(178, 60);
+            this.txtNPCName.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtNPCName.Location = new System.Drawing.Point(3, 3);
             this.txtNPCName.Name = "txtNPCName";
-            this.txtNPCName.Size = new System.Drawing.Size(100, 20);
+            this.txtNPCName.Size = new System.Drawing.Size(455, 20);
             this.txtNPCName.TabIndex = 5;
             // 
             // txtSkill
             // 
-            this.txtSkill.Location = new System.Drawing.Point(178, 113);
+            this.txtSkill.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtSkill.Location = new System.Drawing.Point(3, 32);
             this.txtSkill.Name = "txtSkill";
-            this.txtSkill.Size = new System.Drawing.Size(100, 20);
+            this.txtSkill.Size = new System.Drawing.Size(455, 20);
             this.txtSkill.TabIndex = 6;
             // 
             // txtType
             // 
-            this.txtType.Location = new System.Drawing.Point(178, 174);
+            this.txtType.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtType.Location = new System.Drawing.Point(3, 61);
             this.txtType.Name = "txtType";
-            this.txtType.Size = new System.Drawing.Size(100, 20);
+            this.txtType.Size = new System.Drawing.Size(455, 20);
             this.txtType.TabIndex = 7;
             // 
             // txtFaction
             // 
-            this.txtFaction.Location = new System.Drawing.Point(178, 233);
+            this.txtFaction.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtFaction.Location = new System.Drawing.Point(3, 90);
             this.txtFaction.Name = "txtFaction";
-            this.txtFaction.Size = new System.Drawing.Size(100, 20);
+            this.txtFaction.Size = new System.Drawing.Size(455, 20);
             this.txtFaction.TabIndex = 8;
+            // 
+            // results
+            // 
+            this.results.AutoGenerateColumns = false;
+            this.results.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.results.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.nPCIdDataGridViewTextBoxColumn,
+            this.nPCNameDataGridViewTextBoxColumn,
+            this.skillDataGridViewTextBoxColumn,
+            this.typeDataGridViewTextBoxColumn,
+            this.factionDataGridViewTextBoxColumn});
+            this.results.DataSource = this.nPCBindingSource;
+            this.results.Location = new System.Drawing.Point(3, 177);
+            this.results.Name = "results";
+            this.results.Size = new System.Drawing.Size(455, 410);
+            this.results.TabIndex = 9;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.txtNPCName, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.txtSkill, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.txtType, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.txtFaction, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.results, 0, 6);
+            this.tableLayoutPanel1.Controls.Add(this.txtKeyWord, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.btnSearch, 0, 5);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(66, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 7;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(461, 590);
+            this.tableLayoutPanel1.TabIndex = 10;
+            // 
+            // txtKeyWord
+            // 
+            this.txtKeyWord.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtKeyWord.Location = new System.Drawing.Point(3, 119);
+            this.txtKeyWord.Name = "txtKeyWord";
+            this.txtKeyWord.Size = new System.Drawing.Size(455, 20);
+            this.txtKeyWord.TabIndex = 10;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(5, 122);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(57, 13);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Key Word:";
+            // 
+            // zhengruiDataSet1
+            // 
+            this.zhengruiDataSet1.DataSetName = "zhengruiDataSet1";
+            this.zhengruiDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // nPCBindingSource
+            // 
+            this.nPCBindingSource.DataMember = "NPC";
+            this.nPCBindingSource.DataSource = this.zhengruiDataSet1;
+            // 
+            // nPCTableAdapter
+            // 
+            this.nPCTableAdapter.ClearBeforeFill = true;
+            // 
+            // nPCIdDataGridViewTextBoxColumn
+            // 
+            this.nPCIdDataGridViewTextBoxColumn.DataPropertyName = "NPCId";
+            this.nPCIdDataGridViewTextBoxColumn.HeaderText = "NPCId";
+            this.nPCIdDataGridViewTextBoxColumn.Name = "nPCIdDataGridViewTextBoxColumn";
+            this.nPCIdDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nPCNameDataGridViewTextBoxColumn
+            // 
+            this.nPCNameDataGridViewTextBoxColumn.DataPropertyName = "NPCName";
+            this.nPCNameDataGridViewTextBoxColumn.HeaderText = "NPCName";
+            this.nPCNameDataGridViewTextBoxColumn.Name = "nPCNameDataGridViewTextBoxColumn";
+            // 
+            // skillDataGridViewTextBoxColumn
+            // 
+            this.skillDataGridViewTextBoxColumn.DataPropertyName = "Skill";
+            this.skillDataGridViewTextBoxColumn.HeaderText = "Skill";
+            this.skillDataGridViewTextBoxColumn.Name = "skillDataGridViewTextBoxColumn";
+            // 
+            // typeDataGridViewTextBoxColumn
+            // 
+            this.typeDataGridViewTextBoxColumn.DataPropertyName = "Type";
+            this.typeDataGridViewTextBoxColumn.HeaderText = "Type";
+            this.typeDataGridViewTextBoxColumn.Name = "typeDataGridViewTextBoxColumn";
+            // 
+            // factionDataGridViewTextBoxColumn
+            // 
+            this.factionDataGridViewTextBoxColumn.DataPropertyName = "Faction";
+            this.factionDataGridViewTextBoxColumn.HeaderText = "Faction";
+            this.factionDataGridViewTextBoxColumn.Name = "factionDataGridViewTextBoxColumn";
             // 
             // NPCSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(397, 396);
-            this.Controls.Add(this.txtFaction);
-            this.Controls.Add(this.txtType);
-            this.Controls.Add(this.txtSkill);
-            this.Controls.Add(this.txtNPCName);
+            this.ClientSize = new System.Drawing.Size(527, 590);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnSearch);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "NPCSearch";
             this.Text = "NPCSearch";
             this.Load += new System.EventHandler(this.NPCSearch_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.results)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.zhengruiDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nPCBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -146,5 +272,17 @@
         private System.Windows.Forms.TextBox txtSkill;
         private System.Windows.Forms.TextBox txtType;
         private System.Windows.Forms.TextBox txtFaction;
+        private System.Windows.Forms.DataGridView results;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TextBox txtKeyWord;
+        private System.Windows.Forms.Label label5;
+        private zhengruiDataSet1 zhengruiDataSet1;
+        private System.Windows.Forms.BindingSource nPCBindingSource;
+        private zhengruiDataSet1TableAdapters.NPCTableAdapter nPCTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nPCIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nPCNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn skillDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn typeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn factionDataGridViewTextBoxColumn;
     }
 }

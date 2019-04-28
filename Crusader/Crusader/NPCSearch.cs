@@ -30,13 +30,39 @@ namespace Crusader
             string skill = txtSkill.Text;
             string type = txtType.Text;
             string faction = txtFaction.Text;
+            string order = "SELECT * FROM Crusader.NPC n WHERE ";
+            string q = "";
+            if (NPCName != "") { q = q + "n.NPCName LIKE '%" + NPCName + "%' AND "; }
+            if (skill != "") { q = q + "n.Skill LIKE '%" + skill + "%' AND "; }
+            if (type != "") { q = q + "n.[Type] LIKE '%" + type + "%' AND "; }
+            if (faction != "") { q = q + "n.Faction LIKE '%" + faction + "%' AND "; }
+            order = order + q.Remove(q.Length - 4, 3);
+            try
+            {
+                SqlCommand cmd = new SqlCommand(order, conn);
+                SqlDataAdapter a = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                a.SelectCommand = cmd;
+                a.Fill(dt);
+                results.DataSource = dt;
+                results.AutoResizeColumns();
 
+            }
+            catch (Exception ex)
+            {
+                error_msg = ex.Message;
+                MessageBox.Show(error_msg);
+            }
             conn.Close();
         }
 
         private void NPCSearch_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'zhengruiDataSet1.NPC' table. You can move, or remove it, as needed.
+            this.nPCTableAdapter.Fill(this.zhengruiDataSet1.NPC);
             conn = new SqlConnection(conn_string);
         }
+
+
     }
 }
