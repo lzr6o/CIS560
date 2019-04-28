@@ -38,6 +38,7 @@ namespace Crusader
                             if (u.IsAdmin != "true")
                             {
                                 MessageBox.Show("Welcome player");
+                                new SearchCategory().ShowDialog();
                             }
                             else
                             {

@@ -19,7 +19,7 @@ namespace Crusader
 
         private void btnNPC_Click(object sender, EventArgs e)
         {
-
+            new NPCSearch().ShowDialog();
         }
 
         private void btnChapter_Click(object sender, EventArgs e)
