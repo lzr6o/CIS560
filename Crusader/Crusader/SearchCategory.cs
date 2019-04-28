@@ -27,10 +27,6 @@ namespace Crusader
             new ChapterSearch().ShowDialog();
         }
 
-        private void btnUser_Click(object sender, EventArgs e)
-        {
-        }
-
         private void btnHero_Click(object sender, EventArgs e)
         {
             new HeroSearch().ShowDialog();
